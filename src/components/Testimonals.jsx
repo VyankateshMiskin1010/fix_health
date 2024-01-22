@@ -6,7 +6,7 @@ export default function Testimonals() {
     <div>
       <div className="testimonals-Heading">
         <h1>Patient Recovery Stories</h1>
-        <>Don't just take our word for it</>
+        <p>Don't just take our word for it</p>
       </div>
       <div className="testimonials">
         <div className="testimonial">

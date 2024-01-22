@@ -25,7 +25,7 @@ function Doctors() {
 
   return (
     <div>
-      <section className="section__container doctors__container">
+      <section className="section__container">
         <div className="doctors__header">
           <div className="doctors__header__content">
             <h2 className="section__header">Our Special Doctors</h2>
@@ -40,20 +40,6 @@ function Doctors() {
             <div key={index} className="doctors__card">
               <div className="doctors__card__image">
                 <img src={doctor.image} alt={`doctor-${index}`} />
-                <div className="doctors__socials">
-                  <span>
-                    <i className="ri-instagram-line"></i>
-                  </span>
-                  <span>
-                    <i className="ri-facebook-fill"></i>
-                  </span>
-                  <span>
-                    <i className="ri-heart-fill"></i>
-                  </span>
-                  <span>
-                    <i className="ri-twitter-fill"></i>
-                  </span>
-                </div>
               </div>
               <h4>{doctor.name}</h4>
               <p>{doctor.specialty}</p>
