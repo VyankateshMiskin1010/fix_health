@@ -19,12 +19,12 @@ const ConsultationForm = () => {
   const [selectedDoctor, setSelectedDoctor] = useState({});
 
   useEffect(() => {
-    // Fetch doctors data from the API (assuming you're using json-server)
-    const apiUrl = `http://localhost:3000/doctors`;
+    // Fetch doctors data from the API
+    const apiUrl = "https://vyankateshmiskin1010.github.io/apidr/data.json";
 
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => setDoctorsData(data));
+      .then((data) => setDoctorsData(data.doctors)); // Update to access the "doctors" array
   }, []);
 
   const handleInputChange = (e) => {
@@ -34,21 +34,15 @@ const ConsultationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Filter doctors based on the user's entered city
-    // Filter doctors based on the user's entered city (case-insensitive)
     const filteredDoctors = doctorsData.filter(
       (doctor) => doctor.city.toLowerCase() === formData.city.toLowerCase()
     );
 
     if (filteredDoctors.length > 0) {
-      // Assuming the first doctor in the filtered list is the selected doctor
       const selectedDoctor = filteredDoctors[0];
-      // Set the selectedDoctor in the state
+
       setSelectedDoctor(selectedDoctor);
-      // Display a pop-up with the selected doctor's details
-      // alert(
-      //   `Your appointment is booked with ${selectedDoctor.name}, an expert in ${selectedDoctor.expertise} based in ${selectedDoctor.city}.`
-      // );
+
       console.log(selectedDoctor.name);
     } else {
       alert("No available doctors found for the entered city.");
@@ -58,7 +52,7 @@ const ConsultationForm = () => {
   const shouldShowPreviousExperience = parseInt(formData.age, 10) >= 40;
 
   return (
-    <div className="container">
+    <div id="consultationForm" className="container">
       <div className="form-container">
         <form id="contact" onSubmit={handleSubmit}>
           <h3>Book a Consultation</h3>

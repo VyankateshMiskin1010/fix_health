@@ -74,13 +74,14 @@ header {
   gap: 2rem;
 }
 
-.link a {
+.link {
   padding: 0.5rem;
   color: #fff;
 }
 
-.link a:hover {
-  color: #fff;
+.link :hover {
+  color: #ab4d1b;
+  cursor: pointer;
 }
 
 .header__container {

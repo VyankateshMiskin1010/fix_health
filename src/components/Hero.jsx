@@ -1,6 +1,7 @@
 // Navbar.js
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+
 import "./Hero.css";
 
 const Hero = () => {
@@ -11,14 +12,14 @@ const Hero = () => {
   };
 
   return (
-    <header>
+    <header id="home">
       <nav
         className={`section__container nav__container ${
           isMenuOpen ? "open" : ""
         }`}
       >
         <div className="nav__logo">
-          Health<span>Care</span>
+          Fix<span>Health</span>
         </div>
         <div
           className={`menu-btn ${isMenuOpen ? "open" : ""}`}
@@ -28,30 +29,26 @@ const Hero = () => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
+
         <ul className="nav__links">
           <li className="link">
-            <Link to="/home" onClick={() => setIsMenuOpen(false)}>
+            <Link to="home" smooth={true}>
               Home
             </Link>
           </li>
           <li className="link">
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-              About Us
+            <Link to="consultationForm" smooth={true}>
+              Consultation Form
             </Link>
           </li>
           <li className="link">
-            <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-              Services
+            <Link to="doctors" smooth={true}>
+              Our Doctors
             </Link>
           </li>
           <li className="link">
-            <Link to="/pages" onClick={() => setIsMenuOpen(false)}>
-              Pages
-            </Link>
-          </li>
-          <li className="link">
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
-              Blog
+            <Link to="Testimonalss" smooth={true}>
+              Testimonials
             </Link>
           </li>
         </ul>
@@ -60,28 +57,23 @@ const Hero = () => {
       <div className="mobile-nav">
         <ul className={`mob__links ${isMenuOpen ? "show" : ""}`}>
           <li className="link">
-            <Link to="/home" onClick={() => setIsMenuOpen(false)}>
+            <Link to="home" smooth={true}>
               Home
             </Link>
           </li>
           <li className="link">
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-              About Us
+            <Link to="consultationForm" smooth={true}>
+              Consultation Form
             </Link>
           </li>
           <li className="link">
-            <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-              Services
+            <Link to="doctors" smooth={true}>
+              Our Doctors
             </Link>
           </li>
           <li className="link">
-            <Link to="/pages" onClick={() => setIsMenuOpen(false)}>
-              Pages
-            </Link>
-          </li>
-          <li className="link">
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
-              Blog
+            <Link to="testimonials" smooth={true}>
+              Testimonials
             </Link>
           </li>
         </ul>

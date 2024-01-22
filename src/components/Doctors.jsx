@@ -24,7 +24,7 @@ function Doctors() {
   ];
 
   return (
-    <div>
+    <div id="doctors">
       <section className="section__container">
         <div className="doctors__header">
           <div className="doctors__header__content">
