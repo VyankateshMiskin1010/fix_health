@@ -1,0 +1,118 @@
+/* Your existing styles */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic");
+
+/* Container styles */
+.container {
+  display: flex;
+  max-width: 78vw; /* Adjusted width to 78% of viewport width */
+  margin: 0 auto;
+  margin-top: 8vw;
+}
+
+/* Form styles */
+#contact {
+  flex: 1;
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(59, 51, 51, 0.084);
+  background-color: #f4f4f4;
+}
+
+#contact h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #fb923c;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+}
+
+/* Left section styles */
+.info-container {
+  flex: 1;
+  padding: 25px;
+  background-color: #f1ebeb; /* Add your preferred background color */
+}
+
+/* Form field styles */
+fieldset {
+  border: none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+  width: 95%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#contact input:hover,
+#contact textarea:hover,
+#contact select:hover {
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #fb923c;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #888;
+}
+
+#contact label {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    min-width: 90%;
+  }
+
+  .info-container,
+  #contact {
+    width: 90%;
+  }
+}

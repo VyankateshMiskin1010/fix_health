@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic");
+.testimonals-Heading {
+  display: grid;
+  place-items: center;
+  margin-top: 3vw;
+}
+.testimonals-Heading h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fb923c !important;
+  text-align: start;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.testimonals-Heading p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ddd !important;
+  text-align: start;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.testimonials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.testimonial {
+  width: 25%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.testimonial:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  bottom: -15px;
+  right: 50px;
+  width: 0;
+  border-width: 15px 20px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+
+.testimonial h3 {
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: start;
+  color: black;
+}
+span {
+  color: #ddd;
+}
+.testimonal-author {
+  font-size: 1rem;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+}
+
+@media all AND (max-width: 880px) {
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 90%;
+    margin-bottom: 60px;
+  }
+}
